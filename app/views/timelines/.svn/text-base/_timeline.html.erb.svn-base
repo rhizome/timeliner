@@ -1,3 +1,0 @@
-<%= content_tag_for :li, timeline, class: "#{cycle('even','odd')}" do %>
-  <%= content_tag :p, link_to(timeline.name, timeline), class: 'name' %>
-<% end %>
