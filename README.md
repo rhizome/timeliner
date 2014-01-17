@@ -1,8 +1,10 @@
-= Timeliner
+Timeliner
+====================================
 
 Timeliner is a simple Rails 3.2 sample application demonstrating the use of TimelineJS to create a graphical timeline from a collection of events. Most of the styling and layout is done with Bourbon and Neat from ThoughtBot, which is nice.
 
-== Usage
+Usage
+------------------------------------
 
     git clone git://github.com/rhizome/timeliner.git
     cd timeliner
@@ -12,10 +14,12 @@ Timeliner is a simple Rails 3.2 sample application demonstrating the use of Time
     passenger start #comment out passenger if it won't install and use `rails s`
     Create a timeline
 
-=== Resources and Documentation
+Resources and Documentation
+------------------------------------
 * TimelineJS: http://timeline.knightlab.com
 * Bourbon: http://bourbon.io
 * Neat: http://neat.bourbon.io
 
-=== More Information
+More Information
+------------------------------------
 Pull-requests and bug reports are welcome!
