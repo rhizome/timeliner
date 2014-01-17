@@ -1,0 +1,54 @@
+<%= content_tag :h1, @timeline.name %>
+
+<%= form_for [@timeline, Event.new] do |f| %>
+  <%= content_tag :h3, "Add a new event:" %>
+  <%= content_tag :div, class: 'field' do %>
+    <%= f.label :start_date, "Start Date" %>
+    <%= f.date_select :start_date, :start_year => 1900 %>
+  <% end %>
+  <%= content_tag :div, class: 'field' do %>
+    <%= f.label :end_date, "End Date" %>
+    <%= f.date_select :end_date, :start_year => 1900 %>
+  <% end %>
+  <%= content_tag :div, class: 'field' do %>
+    <%= f.label :one_day, "One Day" %>
+    <%= f.check_box :one_day %>
+  <% end %>
+  <%= content_tag :div, class: 'field' do %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  <% end %>
+  <%= content_tag :div, class: 'field' do %>
+    <%= f.label :description %>
+    <%= f.text_area :description, cols: 40, rows: 5 %>
+  <% end %>
+  <%= content_tag :div, class: 'submit' do %>
+    <%= f.submit "Save" %>
+  <% end %>
+<% end %>
+
+<%= content_tag :div, class: 'actions' do %>
+  <%= link_to 'Destroy', @timeline, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_timeline_path(@timeline) %>
+  <%= link_to 'Back', timelines_path %>
+<% end %>
+
+<div id='timeline'></div>
+
+<%= content_tag :ul, class: 'events' do %>
+  <%= content_tag :h2, "Events in this timeline" %>
+  <%= render @timeline.events %>
+<% end %>
+
+<script>
+  $(document).ready(function() {
+    createStoryJS({
+      type: 'timeline',
+      width: '100%',
+      height: '400',
+      source: "<%= timeline_url(@timeline, :format => :json) %>",
+      embed_id: 'timeline',
+      start_zoom_adjust: '-3'
+    });
+  });
+</script>

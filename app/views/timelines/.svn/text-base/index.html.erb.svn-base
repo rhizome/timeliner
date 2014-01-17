@@ -1,0 +1,15 @@
+<h1>All timelines</h1>
+
+<%= content_tag :ul, class: 'timelines' do %>
+  <% @timelines.each do |timeline| %>
+    <%= content_tag_for :li, timeline, class: "#{cycle('even','odd')}" do %>
+      <%= link_to timeline.name, timeline %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<br>
+
+<%= content_tag :div, class: 'actions' do %>
+  <%= link_to 'New Timeline', new_timeline_path %>
+<% end %>

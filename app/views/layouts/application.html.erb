@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timeliner</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <span class="homelink">
+      <%= link_to_unless_current("<h2>Timeliner</h2>".html_safe, root_url) -%>
+    </span>
+  </header>
+  <div id="content">
+    <%= display_flashes %>
+    <%= yield %>
+  </div>
+</body>
+</html>

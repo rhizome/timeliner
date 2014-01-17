@@ -1,0 +1,14 @@
+<%= content_tag_for :div, @event do %>
+  <%= content_tag :h1, @event.name %>
+  <%= content_tag :p, @event.description %>
+  <%= content_tag :p, @event.start_date %>
+  <%= content_tag :p, @event.end_date %>
+<% end %>
+<%= link_to "Edit", edit_event_path(@event) %>
+
+<%= content_tag :div, class: 'timelines' do %>
+  <%= content_tag :h3, "Timelines for this event" %>
+  <%= content_tag :ul, class: 'timelines' do %>
+    <%= render @event.timelines %>
+  <% end %>
+<% end %>

@@ -1,0 +1,13 @@
+<%= content_tag_for :tr, event, class: "#{cycle('even','odd')}" do %>
+  <%= content_tag :td, class: 'date' do %>
+    <%= event.start_date.strftime("%b %d, %Y") %>
+    <% unless event.one_day? %>
+      - <%= event.end_date.strftime("%b %d, %Y") %>
+    <% end %>
+  <% end %>
+  <%= content_tag :td, link_to(event.name, event), class: 'name' %>
+  <%= content_tag :td, truncate(event.description, length: 70), class: 'desc' %>
+  <%= content_tag :td, class: 'actions' do %>
+    <%= link_to "Edit", edit_event_path(event) %>
+  <% end %>
+<% end %>
