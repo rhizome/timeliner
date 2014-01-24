@@ -3,7 +3,7 @@ require "test_helper"
 describe TimelinesController do
 
   before do
-    @timeline = timelines(:one)
+    @timeline = timelines(:basic)
   end
 
   it "must get index" do
@@ -19,7 +19,7 @@ describe TimelinesController do
 
   it "must create timeline" do
     assert_difference('Timeline.count') do
-      post :create, timeline: {  }
+      post :create, timeline: { name: "a timeline" }
     end
 
     assert_redirected_to timeline_path(assigns(:timeline))
@@ -36,7 +36,7 @@ describe TimelinesController do
   end
 
   it "must update timeline" do
-    put :update, id: @timeline, timeline: {  }
+    put :update, id: @timeline, timeline: { name: "changed name" }
     assert_redirected_to timeline_path(assigns(:timeline))
   end
 

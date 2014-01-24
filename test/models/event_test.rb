@@ -2,7 +2,9 @@ require "test_helper"
 
 describe Event do
   before do
-    @event = Event.new
+    @timeline = timelines(:basic)
+    @event = events(:basic)
+    @timeline.events << @event
   end
 
   it "must be valid" do

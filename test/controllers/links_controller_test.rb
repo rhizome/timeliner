@@ -19,7 +19,7 @@ describe LinksController do
 
   it "must create link" do
     assert_difference('Link.count') do
-      post :create, link: {  }
+      post :create, link: { url: "http://blah.com" }
     end
 
     assert_redirected_to link_path(assigns(:link))
@@ -36,7 +36,7 @@ describe LinksController do
   end
 
   it "must update link" do
-    put :update, id: @link, link: {  }
+    put :update, id: @link, link: { url: "http://blah.com" }
     assert_redirected_to link_path(assigns(:link))
   end
 

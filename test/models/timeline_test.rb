@@ -2,7 +2,7 @@ require "test_helper"
 
 describe Timeline do
   before do
-    @timeline = Timeline.new
+    @timeline = timelines(:basic)
   end
 
   it "must be valid" do

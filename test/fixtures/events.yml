@@ -1,0 +1,6 @@
+basic:
+  name: Event one
+  start_date: 2011-01-01
+
+no_date:
+  name: Event two
