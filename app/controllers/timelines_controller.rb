@@ -36,7 +36,7 @@ class TimelinesController < ApplicationController
 
   # PATCH/PUT /timelines/1
   def update
-    if @timeline.update(timeline_params)
+    if @timeline.update_attributes(timeline_params)
       redirect_to @timeline, notice: 'Timeline was successfully updated.'
     else
       render action: 'edit'
