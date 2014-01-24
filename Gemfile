@@ -28,7 +28,7 @@ group :development do
   gem 'capistrano', '2.15.3'
 end
 
-group :test do
+group :test, :development do
   gem 'minitest-rails'
   gem 'minitest-rails-capybara'
   gem 'minitest-colorize'
