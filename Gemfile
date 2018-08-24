@@ -37,7 +37,7 @@ group :test, :development do
   gem 'minitest-rails-capybara'
   gem 'minitest-colorize'
   gem 'minitest-focus'
-  gem 'factory_girl_rails'
+  gem 'factory_bot'
   gem 'guard-minitest'
   gem 'database_cleaner', '< 1.1.0'
   gem 'faker'
