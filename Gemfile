@@ -9,6 +9,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails', "< 3.0.0"
 gem 'bourbon'
 gem 'neat'
+gem 'bitters'
 
 # json stuff
 gem 'rabl'
