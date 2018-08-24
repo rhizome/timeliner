@@ -1,8 +1,8 @@
 class Timeline < ActiveRecord::Base
-  attr_accessible :name
-
   has_many :connections
-  has_many :events, through: :connections, :order => 'start_date'
+  has_many :events, through: :connections
 
   validates :name, presence: true
+
+  default_scope { order(:start_date) }
 end
