@@ -12,9 +12,11 @@
       <%= link_to_unless_current("<h2>Timeliner</h2>".html_safe, root_url) -%>
     </span>
   </header>
-  <div id="content">
+  <div class="wrapper">
     <%= display_flashes %>
-    <%= yield %>
+    <div id="content">
+      <%= yield %>
+    </div>
   </div>
 </body>
 </html>

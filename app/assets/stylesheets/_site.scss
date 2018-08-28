@@ -38,15 +38,17 @@ header {
     }
   }
 }
-#content {
+.wrapper {
   @include grid-container;
-  .list {
+  #content {
     @include grid-column(10);
     @include grid-shift(1);
-    margin-top: 1em;
-    // padding: 1em;
-    border: 2px solid #e0e0e0;
-    border-radius: 0.5em;
+    .list {
+      margin-top: 1em;
+      // padding: 1em;
+      border: 2px solid #e0e0e0;
+      border-radius: 0.5em;
+    }
   }
 }
 
@@ -128,13 +130,17 @@ header {
 //     }
 //   }
 // }
-// div.actions {
-//   @include grid-column(3);
-//   a {
-//     // @include button(simple, #ccc);
-//     text-align: center;
-//   }
-// }
+div.actions {
+  margin-top: 1rem;
+  // @include grid-column(3);
+  a {
+    display: inline-block;
+    @include button;
+    // @include button(simple, #ccc);
+    text-transform: none;
+    text-align: center;
+  }
+}
 
 // form {
 //   @include grid-column(8);
