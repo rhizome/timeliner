@@ -28,7 +28,7 @@ group :development do
   gem 'rvm-capistrano'
   gem 'capistrano', '2.15.3'
   gem "rack-livereload"
-  gem "guard", require: false
+  gem "guard"
   gem 'guard-livereload', require: false
   gem 'rb-fsevent', require: false
 end
