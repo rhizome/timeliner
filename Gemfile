@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~>4.0.0'
+gem 'rails', '~>4.1.0'
 # gem "strong_parameters"
 gem 'sqlite3'
 gem 'minitest'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'jquery-rails', "< 3.0.0"
+gem 'jquery-rails'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
@@ -36,7 +36,7 @@ end
 group :test, :development do
   gem 'minitest-rails'
   gem 'minitest-rails-capybara'
-  gem 'minitest-colorize'
+  # gem 'minitest-colorize'
   gem 'minitest-focus'
   gem 'factory_bot'
   gem 'guard-minitest'
