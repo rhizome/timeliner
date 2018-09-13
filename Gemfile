@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~>4.2.0'
+gem 'rails', '~>5.0.0'
 # gem "strong_parameters"
 gem 'sqlite3'
-gem 'minitest'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
@@ -14,7 +13,6 @@ gem 'bitters'
 # json stuff
 gem 'rabl'
 gem 'oj'
-
 gem 'timelineJS-rails', '~> 1.1.1'
 
 group :assets do
@@ -26,7 +24,7 @@ end
 group :development do
   gem 'passenger'
   gem 'rvm-capistrano'
-  gem 'capistrano', '2.15.3'
+  gem 'capistrano', '~>2.15.3'
   gem "rack-livereload"
   gem "guard"
   gem 'guard-livereload', require: false
@@ -36,7 +34,6 @@ end
 group :test, :development do
   gem 'minitest-rails'
   gem 'minitest-rails-capybara'
-  # gem 'minitest-colorize'
   gem 'minitest-focus'
   gem 'factory_bot'
   gem 'guard-minitest'
