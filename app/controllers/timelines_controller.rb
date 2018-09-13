@@ -1,8 +1,7 @@
 class TimelinesController < ApplicationController
-  respond_to :html, :json
 
   include ActiveModel::ForbiddenAttributesProtection
-  before_filter :set_timeline, only: [:show, :edit, :update, :destroy]
+  before_action :set_timeline, only: [:edit, :update, :destroy]
 
   # GET /timelines
   def index
@@ -11,7 +10,7 @@ class TimelinesController < ApplicationController
 
   # GET /timelines/1
   def show
-    respond_with @timeline, include: :events
+    @timeline = Timeline.includes(:events).find(params[:id])
   end
 
   # GET /timelines/new
