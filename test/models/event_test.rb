@@ -8,6 +8,6 @@ describe Event do
   end
 
   it "must be valid" do
-    @event.valid?.must_equal true
+    assert_equal @event.valid?, true, @event.inspect
   end
 end
