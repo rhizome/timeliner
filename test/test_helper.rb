@@ -1,8 +1,6 @@
-# $LOAD_PATH << "test"
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
-# require 'minitest/autorun'
 require "minitest/rails"
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
@@ -13,8 +11,7 @@ require "minitest/rails/capybara"
 # require "minitest/pride"
 
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
+  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
-
   # Add more helper methods to be used by all tests here...
 end
