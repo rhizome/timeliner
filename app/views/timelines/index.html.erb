@@ -2,7 +2,7 @@
 
 <%= content_tag :ul, class: 'timelines' do %>
   <% @timelines.each do |timeline| %>
-    <%= content_tag_for :li, timeline, class: "#{cycle('even','odd')}" do %>
+    <%= content_tag :li, timeline, class: "timeline #{cycle('even','odd')}", id: "timeline_#{timeline.id}" do %>
       <%= link_to timeline.name, timeline %>
     <% end %>
   <% end %>

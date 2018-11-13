@@ -1,4 +1,4 @@
-<%= content_tag_for :div, @event do %>
+<%= content_tag :div, @event, class: 'event', id: "event_#{@event.id}" do %>
   <%= content_tag :h1, @event.name %>
   <%= content_tag :p, @event.description %>
   <%= content_tag :p, @event.start_date %>

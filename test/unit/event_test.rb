@@ -8,14 +8,14 @@ class EventTest < ActiveSupport::TestCase
 
   test "event requires a start date" do
     event = Event.new(:name => 'New event')
-    assert ! event.valid?
+    assert !event.valid?
     event.start_date = 2012-02-02
     assert event.valid?
   end
 
   test "event requires a name" do
     event = Event.new(:start_date => '2011-11-11')
-    assert ! event.valid?
+    assert !event.valid?
     event.name = "Updated event"
     assert event.valid?
   end

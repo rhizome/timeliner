@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~>5.0.0'
+gem 'rails', '~>5.1.0'
 # gem "strong_parameters"
 gem 'sqlite3'
 # To use ActiveModel has_secure_password

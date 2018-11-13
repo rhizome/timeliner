@@ -1,4 +1,4 @@
-class Timeline < ActiveRecord::Base
+class Timeline < ApplicationRecord
   has_many :connections
   has_many :events, through: :connections
 

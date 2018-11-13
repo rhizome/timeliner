@@ -1,4 +1,4 @@
-<%= content_tag_for :tr, event, class: "#{cycle('even','odd')}" do %>
+<%= content_tag :tr, event, class: "event #{cycle('even','odd')}", id: "event_#{event.id}" do %>
   <%= content_tag :td, class: 'date' do %>
     <%= event.start_date.strftime("%b %d, %Y") %>
     <% unless event.one_day? %>

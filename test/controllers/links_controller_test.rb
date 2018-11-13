@@ -7,13 +7,13 @@ describe LinksController do
   end
 
   it "must get index" do
-    get :index
+    get '/index.html'
     assert_response :success
     assert_not_nil assigns(:links)
   end
 
   it "must get new" do
-    get '/new'
+    get '/new.html'
     assert_response :success
   end
 
