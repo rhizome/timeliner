@@ -1,0 +1,214 @@
+$dark: #303030;
+$helvetica: sans-serif;
+
+// a { 
+//   text-decoration: none; 
+//   color: black;
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
+
+body {
+  font-family: $helvetica;
+  font-size: 15px;
+  h1 {
+    font-size: 2em;
+    margin: 0.5em 0;
+  }
+  h2 {
+    font-size: 1.25em;
+    margin: 0.25em 0;
+  }
+}
+
+header {
+  @include grid-container;
+  background: linear-gradient(lighten($dark,20%), darken($dark,5%));
+  color: white;
+  font-size: 1.5em;
+  .homelink {
+    @include grid-column(3);
+    @include grid-shift(1);
+    a {
+      text-decoration: none;
+      &:visited {
+        color: inherit;
+      }
+    }
+  }
+}
+.wrapper {
+  @include grid-container;
+  #content {
+    @include grid-column(10);
+    @include grid-shift(1);
+    .list {
+      margin-top: 1em;
+      // padding: 1em;
+      border: 2px solid #e0e0e0;
+      border-radius: 0.5em;
+    }
+  }
+}
+
+// div.timeline {
+//   @include grid-container;
+//   div.heading {
+//     padding: 0.5em;
+//     h1 {
+//       vertical-align: middle;
+//       margin: 0.25em 0;
+//       @include grid-column(9);
+//     }
+//     div.actions {
+//       padding: 0.5em 0;
+//     }
+//   }
+// }
+// #rendered_timeline {
+// }
+
+// ul.timelines {
+//   margin: 1em 0;
+//   li {
+//     padding: 0.25em 0.5em;
+//     &.even {
+//       background-color: lighten($dark,80%);
+//     }
+//     &.odd {
+//       background-color: lighten($dark,75%);
+//     }
+//   }
+//   p {
+//     display: inline-block;
+//     &.date { width: 13em; }
+//     &.name { width: 10em; }
+//     &.desc { width: 20em; }
+//   }
+// }
+// div.events {
+//   padding-top: 1em;
+//   clear: left;
+//   h2, h3 {
+//     text-align: center;
+//   }
+//   table {
+//     @include grid-container;
+//     margin: 1em 0;
+//     tr {
+//       @include grid-column(12);
+//       &.even {
+//         background-color: lighten($dark,75%);
+//       }
+//       &.odd {
+//         background-color: lighten($dark,80%);
+//       }
+//       td {
+//         font-size: 0.7em;
+//         padding: 0.5em 0.5em;
+//         &.date {
+//           @include grid-column(3 of 12);
+//         }
+//         &.name {
+//           @include grid-column(3 of 12);
+//         }
+//         &.desc {
+//           @include grid-column(5 of 12);
+//         }
+//         &.actions {
+//           @include grid-column(1 of 12);
+//           text-align: center;
+//         }
+//       }
+//     }
+//     p {
+//       display: inline-block;
+//       &.date { width: 13em; }
+//       &.name { width: 10em; }
+//       &.desc { width: 20em; }
+//     }
+//   }
+// }
+div.actions {
+  margin-top: 1rem;
+  // @include grid-column(3);
+  a {
+    display: inline-block;
+    @include button;
+    // @include button(simple, #ccc);
+    text-transform: none;
+    text-align: center;
+  }
+}
+
+// form {
+//   @include grid-column(8);
+//   @include grid-shift(2);
+//   border-radius: 0.5em;
+//   background-color: #ccc;
+//   padding: 1em;
+//   margin-top: 1em;
+//   h2 { 
+//     text-align: center;
+//     margin-bottom: 1em;
+//   }
+//   .field {
+//     padding-bottom:0.5em;
+//   }
+//   .info {
+//     @include grid-column(4 of 8);    
+//   }
+//   .dates {
+//     @include grid-column(3 of 8);
+//     label {
+//       display: block;
+//     }
+//   }
+//   input[type=text], textarea {
+//     border: 0;
+//     outline: 0;
+//     font-size: 1.25em;
+//   }
+//   .submit {
+//     clear: left;
+//     text-align: center;
+//     input {
+//       // @include button;
+//     }
+//   }
+// }
+// div#flash {
+//   p {
+//     padding: 0.5em 1em;
+//     border-radius: 5px;
+//     a.close_button {
+//       float: right;
+//       font-weight: bold;
+//       text-shadow: 1px 1px 3px #ccc;
+//     }
+//   }
+//   p.notice {
+//     background-color: desaturate(lighten(green,40%),50%);
+//     border: 1px solid green;
+//   }
+//   p.alert {
+//     background-color: lighten(red, 30%);
+//     border: 1px solid red;
+//   }
+// }
+
+// div#error_explanation {
+//   margin-bottom: 1em;
+//   background-color: #eee;
+//   padding: 0.5em;
+//   h2 {
+//     font-size: 1em;
+//   }
+
+// }
+// div.timelines {
+//   margin-top: 1em;
+//   padding: 0.5em;
+//   border: 1px solid gray;
+// }

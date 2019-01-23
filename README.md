@@ -1,7 +1,7 @@
 Timeliner
 ====================================
 
-Timeliner is a simple Rails 3.2 sample application demonstrating the use of TimelineJS to create a graphical timeline from a collection of events. Most of the styling and layout is done with Bourbon and Neat from ThoughtBot, which is nice.
+Timeliner is a simple Rails 5 sample application demonstrating the use of TimelineJS to create a graphical timeline from a collection of events. Most of the styling and layout is done with Bourbon and Neat from ThoughtBot, which is nice.
 
 Usage
 ------------------------------------

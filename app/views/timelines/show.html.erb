@@ -1,4 +1,4 @@
-<%= content_tag_for :div, @timeline do %>
+<%= content_tag :div, @timeline, class: 'timeline', id: "timeline_#{@timeline.id}" do %>
   <%= content_tag :div, class: 'heading' do %>
     <%= content_tag :h1, @timeline.name %>
     <%= content_tag :div, class: 'actions' do %>

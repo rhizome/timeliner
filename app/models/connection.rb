@@ -1,6 +1,4 @@
-class Connection < ActiveRecord::Base
-  attr_accessible :event_id, :timeline_id
-
+class Connection < ApplicationRecord
   belongs_to :timeline
   belongs_to :event
 end
